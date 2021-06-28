@@ -1,0 +1,170 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: 熟悉路线站点
+subtitle: 本人是个小小程序员，之前一直是看大神博客学习，博客一是为了激励自己学习，二是记录自己的学习历程，以方便及时回顾相关知识。主要技术点包括Java后端，Spring框架，数据库，计算机基础知识，以及技术分享。
+description: ''
+keywords: Spring,Spring Boot,Spring Cloud,计算机网络,操作系统,数据库,MySQL,MyBatis,Redis
+author: 'duanjiaojiao'
+language: 'zh-CN'
+timezone: 'Asia/Shanghai'
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
+url: https://duanjiaojiao316.github.io/
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+pretty_urls:
+  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link:
+  enable: true # Open external links in new tab
+  field: site # Apply to the whole site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+# 生成图片保存文件夹
+post_asset_folder: true
+# 安装插件hexo-renderer-marked，hexo和Typora的相同方式引用图片
+marked:
+  prependRoot: true
+  postAsset: true
+
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+
+# Category & Tag
+default_category: categorized
+category_map:
+tag_map:
+
+# Metadata elements
+## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+meta_generator: true
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+## updated_option supports 'mtime', 'date', 'empty'
+updated_option: 'mtime'
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Include / Exclude file(s)
+## include:/exclude: options only apply to the 'source/' folder
+include:
+exclude:
+ignore:
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: pure
+
+# Deployment
+## Docs: https://hexo.io/docs/one-command-deployment
+deploy:
+  type: git
+  repo: https://github.com/duanjiaojiao316/duanjiaojiao316.github.io.git
+  branch: master
+
+# hexo-neat
+neat_enable: true
+neat_html:
+  enable: true
+  exclude:  
+neat_css:
+  enable: true
+  exclude:
+    - '*.min.css'
+neat_js:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude:
+    - '*.min.js' 
+
+mathjax: true
+markdown_it_plus:
+  highlight: true
+  html: true
+  xhtmlOut: true
+  breaks: true
+  langPrefix:
+  linkify: true
+  typographer:
+  quotes: “”‘’
+  plugins:
+    - plugin:
+        name: markdown-it-katex
+        enable: true
+    - plugin:
+        name: markdown-it-mark
+        enable: true
+
+# Fancybox
+# 图集功能
+fancybox: true
+# 评论
+comment:
+  type: valine  # 启用哪种评论系统
+
+translate_title:
+  translate_way: google    #google | baidu | youdao
+  # youdao_api_key: XXX
+  # youdao_keyfrom: XXX
+  is_need_proxy: false     #true | false
+  # proxy_url: http://localhost:8123
+
+# 可以直接在网页端创建、编辑markdown文章内容，并将内容发布到_posts里。
+# 最方便的是可以很方便的给文章加标题、分类、打标签
+# admin:
+#   username: duanjiaojiao
+#   password_hash: duanjiaojiao9536
+#   secret: duanjiaojiao316
